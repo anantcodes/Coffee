@@ -1,3 +1,4 @@
+import 'package:coffee/shared/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'auth.dart';
@@ -34,7 +35,7 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign up to Communitiy App'),
+        title: Text('Sign up'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
@@ -53,6 +54,7 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0,),
               TextFormField(
+                decoration: textInputDecoration,
                 validator: (val)=>val.isEmpty?'Enter an email':null ,
                 onChanged: (val){
                   setState(() {
