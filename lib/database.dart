@@ -15,4 +15,14 @@ class DatabaseService
    'strength':strength,
  });
   }
+
+
+  //get brews stream
+
+Stream<QuerySnapshot> get brews{
+    return brewCollection.snapshots();
+}
+
+
+
 }
