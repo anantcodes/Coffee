@@ -4,6 +4,7 @@ import 'auth.dart';
 import 'package:coffee/database.dart';
 import 'package:provider/provider.dart';
 
+import 'brew.dart';
 import 'brew_list.dart';
 class Home extends StatelessWidget {
 
@@ -12,7 +13,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<QuerySnapshot>.value(
+    return StreamProvider<List<Brew>>.value(
       value: DatabaseService().brews,
       child: Scaffold(
         backgroundColor: Colors.brown[50],
