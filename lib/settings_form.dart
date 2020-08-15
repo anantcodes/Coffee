@@ -34,6 +34,24 @@ class _SettingsFormState extends State<SettingsForm> {
             validator: (val) => val.isEmpty ? 'Please enter a name' : null,
             onChanged: (val) => setState(() => _currentName = val),
           ),
+
+          SizedBox(height: 20.0,),
+          //dropdown
+          //slider
+
+          RaisedButton(
+              color: Colors.pink[400],
+              child: Text(
+                'Update',
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () async {
+                print(_currentName);
+                print(_currentSugars);
+                print(_currentStrength);
+              }
+          ),
+
         ],
       ),
     );
