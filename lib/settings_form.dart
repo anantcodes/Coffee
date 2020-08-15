@@ -28,6 +28,12 @@ class _SettingsFormState extends State<SettingsForm> {
             'Update your brew settings.',
             style: TextStyle(fontSize: 18.0),
           ),
+          SizedBox(height: 20.0,),
+          TextFormField(
+            decoration: textInputDecoration,
+            validator: (val) => val.isEmpty ? 'Please enter a name' : null,
+            onChanged: (val) => setState(() => _currentName = val),
+          ),
         ],
       ),
     );
