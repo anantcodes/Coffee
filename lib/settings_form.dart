@@ -44,6 +44,7 @@ class _SettingsFormState extends State<SettingsForm> {
                child: Text('$sugar sugars'),
              );
             }).toList(),
+            onChanged: (val) => setState(() => _currentSugars = val),
           ),
 
 
