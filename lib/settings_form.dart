@@ -20,6 +20,16 @@ class _SettingsFormState extends State<SettingsForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: <Widget>[
+          Text(
+            'Update your brew settings.',
+            style: TextStyle(fontSize: 18.0),
+          ),
+        ],
+      ),
+    );
   }
 }
