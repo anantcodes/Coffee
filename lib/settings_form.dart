@@ -50,7 +50,13 @@ class _SettingsFormState extends State<SettingsForm> {
           ),
 
 
-
+         Slider(
+           value: (_currentStrength ?? 100 ).toDouble(),
+           min:100.0 ,
+           max: 900.0,
+           divisions: 8,
+           onChanged: (val)=> setState(()=>_currentStrength=val.round())
+         ),
           //slider
 
           RaisedButton(
