@@ -34,6 +34,6 @@ Stream<List<Brew>> get brews{
     .map(_brewListFromSnapshot);
 }
 
-
+//get user doc stream
 
 }
